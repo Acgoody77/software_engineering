@@ -1,14 +1,21 @@
 //Function Definitions
 #include <string>
+#include <iostream>
 #include "order.h"
 
 using namespace std;
 
 string CustomerInterface::order_request(){
-	string order_num; 
-	cout << "Enter in order request number: ";
+	string order_num;
+  int order_rand = rand();
+
+  cout << "**********Item's**********\n";
+  cout << "Item [1]\n Item [2]\n Item [3]\n Item [4]\n Item [5]\n"; 
+	cout << "Enter in item number you want to purchase: ";
 	cin >> order_num;
-	return order_num;
+  int ord_n = order_rand * stoi(order_num);
+  return to_string(ord_n);
+    //return random order number times the order item purchased
 
 }
 
@@ -179,4 +186,5 @@ void EmailServiceInterface::email(){
   cout << "Enter in email to send confirmation: " << endl;
   cin >> email;
   cout << "Email sent to: " + email << endl;
+  cout << "*************END***************" << endl;
 }
