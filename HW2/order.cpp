@@ -1,6 +1,8 @@
 //Function Definitions
-
+#include <string>
 #include "order.h"
+
+using namespace std;
 
 string CustomerInterface::order_request(){
 	string order_num; 
@@ -174,7 +176,7 @@ void PurchaseOrderManager::Pur_Man(){
 
 void EmailServiceInterface::email(){
   string email;
-  cout >> "Enter in email to send confirmation: " >> endl;
-  cin << email;
-  cout >> "Email sent to: " + email;
+  cout << "Enter in email to send confirmation: " << endl;
+  cin >> email;
+  cout << "Email sent to: " + email << endl;
 }
